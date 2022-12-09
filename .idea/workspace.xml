@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="Working with the elements inside the arrays like accessing the elements, adding, pushing, deleting, and so on.">
-      <change afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/literal-objects.js" afterDir="false" />
+    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="Starting working with literal objects.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01- Fundamentals/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/literal-objects.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/literal-objects.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670601595820</updated>
       <workItem from="1670601597310" duration="17000" />
-      <workItem from="1670601617249" duration="9064000" />
+      <workItem from="1670601617249" duration="9843000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1670602098328</created>
@@ -87,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670610466495</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Starting working with literal objects.">
+      <created>1670613738585</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670613738585</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +116,7 @@
     <MESSAGE value="Learning about the primitive data types in JS" />
     <MESSAGE value="Starting to work with Arrays." />
     <MESSAGE value="Working with the elements inside the arrays like accessing the elements, adding, pushing, deleting, and so on." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working with the elements inside the arrays like accessing the elements, adding, pushing, deleting, and so on." />
+    <MESSAGE value="Starting working with literal objects." />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting working with literal objects." />
   </component>
 </project>

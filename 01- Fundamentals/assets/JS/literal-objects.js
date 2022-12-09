@@ -33,3 +33,18 @@ console.log('last armor:', character.armors[character.armors.length - 1]);
 //Working in a dynamic way:
 const x = 'alive';
 console.log('Alive:', character[x]);
+
+// There's more: Deleting a property
+delete character.age;
+console.log(character)
+
+// entriesPares
+
+const entriesPares = Object.entries(character);
+console.log(entriesPares);
+
+const property = Object.getOwnPropertyNames(character);
+console.log(property);
+
+const values = Object.values(character);
+console.log({property, values});
