@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="More about Literal Objects.">
-      <change afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/functions.js" afterDir="false" />
+    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="Starting to work with functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01- Fundamentals/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670601595820</updated>
       <workItem from="1670601597310" duration="17000" />
-      <workItem from="1670601617249" duration="11923000" />
+      <workItem from="1670601617249" duration="13210000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1670602098328</created>
@@ -101,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670614506251</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Starting to work with functions">
+      <created>1670674590630</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670674590630</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +132,7 @@
     <MESSAGE value="Working with the elements inside the arrays like accessing the elements, adding, pushing, deleting, and so on." />
     <MESSAGE value="Starting working with literal objects." />
     <MESSAGE value="More about Literal Objects." />
-    <option name="LAST_COMMIT_MESSAGE" value="More about Literal Objects." />
+    <MESSAGE value="Starting to work with functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting to work with functions" />
   </component>
 </project>
