@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="Learning about the Conditional Ternary Operator">
-      <change afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/switch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="Working with the Switch conditional statement">
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/alerts.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/alerts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/arrays.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/arrays.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/arrays2.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/arrays2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/boolean-logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/boolean-logic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/if-else.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/if-else.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/literal-objects.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/literal-objects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/primitives.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/primitives.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/protip-returns.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/protip-returns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/reference-value.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/reference-value.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/switch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01- Fundamentals/assets/JS/ternary-operator.js" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/bases/ternary-operator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01- Fundamentals/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +48,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fernando\Desktop\JavaScript\01- Fundamentals\assets\JS\bases" />
       <recent name="C:\Users\Fernando\Desktop\JavaScript\01- Fundamentals" />
       <recent name="C:\Users\Fernando\Desktop\JavaScript" />
     </key>
@@ -50,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670601595820</updated>
       <workItem from="1670601597310" duration="17000" />
-      <workItem from="1670601617249" duration="26204000" />
+      <workItem from="1670601617249" duration="26450000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1670602098328</created>
@@ -150,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670882615773</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Working with the Switch conditional statement">
+      <created>1670883667608</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670883667608</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +201,7 @@
     <MESSAGE value="Starting to work with Control Structures If else - else if" />
     <MESSAGE value="We've learned about boolean logic and its operators NOT !, AND &amp;&amp;, OR ||, etc" />
     <MESSAGE value="Learning about the Conditional Ternary Operator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Learning about the Conditional Ternary Operator" />
+    <MESSAGE value="Working with the Switch conditional statement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working with the Switch conditional statement" />
   </component>
 </project>
