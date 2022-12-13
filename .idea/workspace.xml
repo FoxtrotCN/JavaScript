@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="We've learned about the bases so far. Now, it's time for control structures how are loops.">
-      <change afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/loops/while-do-while.js" afterDir="false" />
+    <list default="true" id="eabbe90d-74f3-40a9-a543-b1b1ec29b462" name="Changes" comment="Working with while and do while loops">
+      <change afterPath="$PROJECT_DIR$/01- Fundamentals/assets/JS/loops/for.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01- Fundamentals/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/01- Fundamentals/index.html" afterDir="false" />
     </list>
@@ -51,7 +51,8 @@
       <option name="presentableId" value="Default" />
       <updated>1670601595820</updated>
       <workItem from="1670601597310" duration="17000" />
-      <workItem from="1670601617249" duration="28163000" />
+      <workItem from="1670601617249" duration="28793000" />
+      <workItem from="1670958611007" duration="724000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1670602098328</created>
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670883945986</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Working with while and do while loops">
+      <created>1670896248605</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670896248605</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +207,7 @@
     <MESSAGE value="Learning about the Conditional Ternary Operator" />
     <MESSAGE value="Working with the Switch conditional statement" />
     <MESSAGE value="We've learned about the bases so far. Now, it's time for control structures how are loops." />
-    <option name="LAST_COMMIT_MESSAGE" value="We've learned about the bases so far. Now, it's time for control structures how are loops." />
+    <MESSAGE value="Working with while and do while loops" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working with while and do while loops" />
   </component>
 </project>
