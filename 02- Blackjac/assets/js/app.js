@@ -41,3 +41,22 @@ const requestCard = () => {
 // }
 
 // requestCard()
+
+const cardValue = (card) => {
+    const value = card.substring(0, card.length - 1);
+    return (isNaN(value)) ?
+        (value === 'A') ? 11 : 10
+        : value * 1;
+    /*let score = 0;
+    if (isNaN(value)) {
+        score = (value === 'A') ? 11 : 10;
+        // console.log(`It's not a number`);
+    } else {
+        // console.log(`It's a number`);
+        score = value * 1;
+    }
+    console.log(score);*/
+}
+
+const value = cardValue(requestCard());
+console.log({value});
