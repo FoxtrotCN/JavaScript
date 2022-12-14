@@ -11,6 +11,9 @@ let playerScore = 0,
 
 const btnRequestCard = document.querySelector('#btnRequestCard');
 const htmlPoints = document.querySelectorAll('small');
+const playerDivCards = document.querySelector('#player-cards');
+
+
 
 
 
@@ -73,4 +76,16 @@ btnRequestCard.addEventListener('click', () => {
     const card = requestCard();
     playerScore = playerScore + cardValue(card);
     htmlPoints[0].innerText = playerScore;
+    const cardImg = document.createElement('img');
+    cardImg.src = `assets/cards/${card}.png`;
+    cardImg.classList.add('cards');
+    playerDivCards.append(cardImg);
+
+    if (playerScore > 21) {
+        console.warn('You lose!')
+        btnRequestCard.disabled = true;
+    } else if (playerScore === 21) {
+        console.warn('You Won!');
+        btnRequestCard.disabled = true;
+    }
 })
