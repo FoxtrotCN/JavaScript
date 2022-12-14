@@ -4,6 +4,16 @@ let deck = [];
 const cardsTypes = ['C', 'D', 'H', 'S'];
 const specialCards = ['A', 'J', 'Q', 'K'];
 
+let playerScore = 0,
+    computerScore = 0;
+
+//HTML References
+
+const btnRequestCard = document.querySelector('#btnRequestCard');
+const htmlPoints = document.querySelectorAll('small');
+
+
+
 const makeDeck = () => {
     for (let c = 2; c <=10; c++) {
         for (let type of cardsTypes) {
@@ -16,9 +26,10 @@ const makeDeck = () => {
             deck.push(spec + type);
         }
     }
-    console.log(deck);
+
     //Shuffle deck
     deck = _.shuffle(deck);
+    console.log(deck);
     return deck;
 }
 
@@ -31,8 +42,6 @@ const requestCard = () => {
         throw 'The deck is empty';
     }
     const card = deck.pop()
-    console.log(deck);
-    console.log(card)
     return card;
 }
 
@@ -58,5 +67,10 @@ const cardValue = (card) => {
     console.log(score);*/
 }
 
-const value = cardValue(requestCard());
-console.log({value});
+
+//Events
+btnRequestCard.addEventListener('click', () => {
+    const card = requestCard();
+    playerScore = playerScore + cardValue(card);
+    htmlPoints[0].innerText = playerScore;
+})
