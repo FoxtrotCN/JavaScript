@@ -1,4 +1,3 @@
-
 let deck = [];
 
 const cardsTypes = ['C', 'D', 'H', 'S'];
@@ -10,15 +9,14 @@ let playerScore = 0,
 //HTML References
 
 const btnRequestCard = document.querySelector('#btnRequestCard');
+const btnStop = document.querySelector('#btnStop');
 const htmlPoints = document.querySelectorAll('small');
 const playerDivCards = document.querySelector('#player-cards');
-
-
-
+const computerDivCards = document.querySelector('#computer-cards');
 
 
 const makeDeck = () => {
-    for (let c = 2; c <=10; c++) {
+    for (let c = 2; c <= 10; c++) {
         for (let type of cardsTypes) {
             deck.push(c + type);
         }
@@ -70,6 +68,25 @@ const cardValue = (card) => {
     console.log(score);*/
 }
 
+// Computer turn
+
+const computerTurn = (minimumPoints) => {
+    do {
+        const card = requestCard();
+        computerScore = computerScore + cardValue(card);
+        htmlPoints[1].innerText = computerScore;
+        const cardImg = document.createElement('img');
+        cardImg.src = `assets/cards/${card}.png`;
+        cardImg.classList.add('cards');
+        computerDivCards.append(cardImg);
+
+        if (minimumPoints > 21) {
+            break;
+        }
+
+    } while ((computerScore < minimumPoints) && (minimumPoints <= 21));
+}
+
 
 //Events
 btnRequestCard.addEventListener('click', () => {
@@ -84,8 +101,19 @@ btnRequestCard.addEventListener('click', () => {
     if (playerScore > 21) {
         console.warn('You lose!')
         btnRequestCard.disabled = true;
+        btnStop.disabled = true;
+        computerTurn(playerScore);
+
+
     } else if (playerScore === 21) {
         console.warn('You Won!');
         btnRequestCard.disabled = true;
+        btnStop.disabled = true;
     }
+})
+
+btnStop.addEventListener('click', () => {
+    btnRequestCard.disabled = true;
+    btnStop.disabled = true;
+    computerTurn(playerScore);
 })
