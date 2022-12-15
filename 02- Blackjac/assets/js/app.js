@@ -10,6 +10,7 @@ let playerScore = 0,
 
 const btnRequestCard = document.querySelector('#btnRequestCard');
 const btnStop = document.querySelector('#btnStop');
+const btnNewGame = document.querySelector('#btnNew');
 const htmlPoints = document.querySelectorAll('small');
 const playerDivCards = document.querySelector('#player-cards');
 const computerDivCards = document.querySelector('#computer-cards');
@@ -85,6 +86,17 @@ const computerTurn = (minimumPoints) => {
         }
 
     } while ((computerScore < minimumPoints) && (minimumPoints <= 21));
+
+
+    if (computerScore === minimumPoints) {
+        alert('Nobody wins! :(');
+    } else if (minimumPoints > 21) {
+        alert('Computer Wins!');
+    } else if (computerScore > 21) {
+        alert('Player Wins!');
+    } else {
+        alert('Computer Won!');
+    }
 }
 
 
@@ -116,4 +128,27 @@ btnStop.addEventListener('click', () => {
     btnRequestCard.disabled = true;
     btnStop.disabled = true;
     computerTurn(playerScore);
+})
+
+
+btnNewGame.addEventListener('click', () => {
+    console.clear();
+    deck = [];
+    deck = makeDeck();
+
+
+    playerScore = 0;
+    computerScore = 0;
+
+    htmlPoints[0].innerText = 0;
+    htmlPoints[1].innerText = 0;
+
+    computerDivCards.innerHTML = '';
+    playerDivCards.innerHTML = '';
+
+    btnRequestCard.disabled = false;
+    btnStop.disabled = false;
+
+
+
 })
