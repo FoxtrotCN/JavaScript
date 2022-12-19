@@ -2,21 +2,32 @@
     "use strict";
     let deck = [];
 
-    const cardsTypes = ['C', 'D', 'H', 'S'];
-    const specialCards = ['A', 'J', 'Q', 'K'];
+    const cardsTypes = ['C', 'D', 'H', 'S'],
+        specialCards = ['A', 'J', 'Q', 'K'];
 
-    let playerScore = 0,
-        computerScore = 0;
+    // let playerScore = 0,
+    //     computerScore = 0;
+
+    let playerPoints = [];
+
+
 
 //HTML References
 
-    const btnRequestCard = document.querySelector('#btnRequestCard');
-    const btnStop = document.querySelector('#btnStop');
-    const btnNewGame = document.querySelector('#btnNew');
-    const htmlPoints = document.querySelectorAll('small');
-    const playerDivCards = document.querySelector('#player-cards');
-    const computerDivCards = document.querySelector('#computer-cards');
+    const btnRequestCard = document.querySelector('#btnRequestCard'),
+     btnStop = document.querySelector('#btnStop'),
+     btnNewGame = document.querySelector('#btnNew'),
+     htmlPoints = document.querySelectorAll('small'),
+     playerDivCards = document.querySelector('#player-cards'),
+     computerDivCards = document.querySelector('#computer-cards');
 
+    const startGame = (numPlayers = 2) => {
+        deck = makeDeck();
+        for (let p = 0; p < numPlayers; p++) {
+            playerPoints.push(0);
+        }
+        console.log({numPlayers});
+    }
 
     const makeDeck = () => {
         for (let c = 2; c <= 10; c++) {
@@ -32,11 +43,9 @@
         }
 
         //Shuffle deck
-        deck = _.shuffle(deck);
-        return deck;
+        return _.shuffle(deck);
     }
 
-    makeDeck()
 
 // function request a card
 
@@ -44,8 +53,7 @@
         if (deck.length === 0) {
             throw 'The deck is empty';
         }
-        const card = deck.pop()
-        return card;
+        return deck.pop();
     }
 
 // for (let i = 0; i<=100; i++) {
@@ -70,6 +78,9 @@
         console.log(score);*/
     }
 
+    const pointsAccumulator = () => {
+
+    }
 // Computer turn
 
     const computerTurn = (minimumPoints) => {
@@ -134,8 +145,9 @@
 
     btnNewGame.addEventListener('click', () => {
         console.clear();
-        deck = [];
-        deck = makeDeck();
+        startGame();
+        // deck = [];
+        // deck = makeDeck();
 
 
         playerScore = 0;
