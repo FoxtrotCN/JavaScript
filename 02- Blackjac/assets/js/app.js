@@ -137,14 +137,12 @@ const myModule = (() => {
         // playerDivCards.append(cardImg);
 
         if (playerPoints > 21) {
-            console.warn('You lose!')
             btnRequestCard.disabled = true;
             btnStop.disabled = true;
             computerTurn(playerPoints);
 
 
         } else if (playerPoints === 21) {
-            console.warn('You Won!');
             btnRequestCard.disabled = true;
             btnStop.disabled = true;
         }
@@ -153,7 +151,7 @@ const myModule = (() => {
     btnStop.addEventListener('click', () => {
         btnRequestCard.disabled = true;
         btnStop.disabled = true;
-        computerTurn(playerPoints);
+        computerTurn(playerPoints[0]);
     })
 
 
