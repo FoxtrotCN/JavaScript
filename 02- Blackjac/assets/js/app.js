@@ -1,4 +1,4 @@
-(() => {
+const myModule = (() => {
     "use strict";
     let deck = [];
 
@@ -11,22 +11,27 @@
     let playerPoints = [];
 
 
-
 //HTML References
 
     const btnRequestCard = document.querySelector('#btnRequestCard'),
-     btnStop = document.querySelector('#btnStop'),
-     btnNewGame = document.querySelector('#btnNew'),
-     htmlPoints = document.querySelectorAll('small'),
-     playerDivCards = document.querySelector('#player-cards'),
-     computerDivCards = document.querySelector('#computer-cards');
+        btnStop = document.querySelector('#btnStop'),
+        btnNewGame = document.querySelector('#btnNew'),
+        htmlPoints = document.querySelectorAll('span'),
+        divPlayerCards = document.querySelectorAll('.divCards');
 
     const startGame = (numPlayers = 2) => {
         deck = makeDeck();
+        playerPoints = [];
         for (let p = 0; p < numPlayers; p++) {
             playerPoints.push(0);
         }
-        console.log({numPlayers});
+        htmlPoints.forEach(elem => elem.innerHTML = 0);
+        divPlayerCards.forEach(elem => elem.innerHTML = '');
+
+        btnRequestCard.disabled = false;
+        btnStop.disabled = false;
+
+
     }
 
     const makeDeck = () => {
@@ -77,28 +82,23 @@
         }
         console.log(score);*/
     }
+    // Turn: 0 = first player and last will be the computer
 
-    const pointsAccumulator = () => {
-
+    const pointsAccumulator = (card, turn) => {
+        playerPoints[turn] += cardValue(card);
+        htmlPoints[turn].innerText = playerPoints[turn];
+        return playerPoints[turn];
     }
-// Computer turn
 
-    const computerTurn = (minimumPoints) => {
-        do {
-            const card = requestCard();
-            computerScore = computerScore + cardValue(card);
-            htmlPoints[1].innerText = computerScore;
-            const cardImg = document.createElement('img');
-            cardImg.src = `assets/cards/${card}.png`;
-            cardImg.classList.add('cards');
-            computerDivCards.append(cardImg);
+    const makeCard = (card, turn) => {
+        const cardImg = document.createElement('img');
+        cardImg.src = `assets/cards/${card}.png`;
+        cardImg.classList.add('cards');
+        divPlayerCards[turn].append(cardImg);
+    }
 
-            if (minimumPoints > 21) {
-                break;
-            }
-
-        } while ((computerScore < minimumPoints) && (minimumPoints <= 21));
-
+    const setWinner = () => {
+        const [minimumPoints, computerScore] = playerPoints;
 
         if (computerScore === minimumPoints) {
             alert('Nobody wins! :(');
@@ -109,27 +109,41 @@
         } else {
             alert('Computer Won!');
         }
+
+    }
+// Computer turn
+
+    let computerScore = 0;
+    const computerTurn = (minimumPoints) => {
+        do {
+            const card = requestCard();
+            computerScore = pointsAccumulator(card, playerPoints.length - 1);
+            makeCard(card, playerPoints.length - 1);
+
+        } while ((computerScore < minimumPoints) && (minimumPoints <= 21));
+        setWinner();
     }
 
 
 //Events
     btnRequestCard.addEventListener('click', () => {
         const card = requestCard();
-        playerScore = playerScore + cardValue(card);
-        htmlPoints[0].innerText = playerScore;
-        const cardImg = document.createElement('img');
-        cardImg.src = `assets/cards/${card}.png`;
-        cardImg.classList.add('cards');
-        playerDivCards.append(cardImg);
+        const playerPoints = pointsAccumulator(card, 0);
+        makeCard(card, 0);
 
-        if (playerScore > 21) {
+        // const cardImg = document.createElement('img');
+        // cardImg.src = `assets/cards/${card}.png`;
+        // cardImg.classList.add('cards');
+        // playerDivCards.append(cardImg);
+
+        if (playerPoints > 21) {
             console.warn('You lose!')
             btnRequestCard.disabled = true;
             btnStop.disabled = true;
-            computerTurn(playerScore);
+            computerTurn(playerPoints);
 
 
-        } else if (playerScore === 21) {
+        } else if (playerPoints === 21) {
             console.warn('You Won!');
             btnRequestCard.disabled = true;
             btnStop.disabled = true;
@@ -139,30 +153,16 @@
     btnStop.addEventListener('click', () => {
         btnRequestCard.disabled = true;
         btnStop.disabled = true;
-        computerTurn(playerScore);
+        computerTurn(playerPoints);
     })
 
 
     btnNewGame.addEventListener('click', () => {
-        console.clear();
         startGame();
-        // deck = [];
-        // deck = makeDeck();
-
-
-        playerScore = 0;
-        computerScore = 0;
-
-        htmlPoints[0].innerText = 0;
-        htmlPoints[1].innerText = 0;
-
-        computerDivCards.innerHTML = '';
-        playerDivCards.innerHTML = '';
-
-        btnRequestCard.disabled = false;
-        btnStop.disabled = false;
-
 
     })
+    return {
+        newGame: startGame
 
+    };
 })();
