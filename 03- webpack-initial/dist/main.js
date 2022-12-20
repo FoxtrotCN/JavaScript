@@ -1,0 +1,1 @@
+(()=>{"use strict";(e=>{console.log("Making an h1 tag");const n=document.createElement("h1");n.innerText="Hi, Fernando",document.body.append(n)})()})();

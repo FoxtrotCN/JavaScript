@@ -1,4 +1,4 @@
-const greeting = (name) => {
+export const greeting = (name) => {
     console.log('Making an h1 tag');
 
     const h1 = document.createElement('h1');

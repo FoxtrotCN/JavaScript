@@ -1,4 +1,4 @@
 import {greeting} from './js/components.js'
 
-const name = 'Fernando'
+const name = 'Fernando';
 greeting(name);
