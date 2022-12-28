@@ -1,3 +1,5 @@
+import '../css/components.css';
+
 export const greeting = (name) => {
     console.log('Making an h1 tag');
 
