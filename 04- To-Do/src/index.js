@@ -3,12 +3,21 @@ import './styles.css';
 import {Task} from "./js/classes/todo.class";
 import {TaskList} from "./js/classes/todo-list";
 
+import {makeTaskHtml} from "./js/components";
+
 const taskList = new TaskList();
-const task1 = new Task("Comer china");
-taskList.newTask(task1);
+const task = new Task("Comer china");
+
+taskList.newTask(task);
+
+
 
 
 
 console.log(taskList);
-console.log(task1);
+
+makeTaskHtml(task);
+
+
+
 
